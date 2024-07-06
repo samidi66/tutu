@@ -1,0 +1,189 @@
+/* Warna tema Neuromorphism */
+:root {
+    --bg-color: #e0e5ec;
+    --shadow-light: #ffffff;
+    --shadow-dark: #a3b1c6;
+    --primary-color: #007BFF;
+}
+
+/* Gaya dasar untuk elemen body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+/* Kontainer utama */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: var(--bg-color);
+    box-shadow: 9px 9px 16px var(--shadow-dark), -9px -9px 16px var(--shadow-light);
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Gaya untuk judul */
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Gaya untuk bagian input */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#ipInput {
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    font-size: 1em;
+    box-shadow: inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
+    background: var(--bg-color);
+    resize: none;
+    height: 120px;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    font-size: 1em;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: inset 5px 5px 10px var(--shadow-dark), inset -5px -5px 10px var(--shadow-light);
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+}
+
+/* Gaya untuk spinner */
+.spinner {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Gaya untuk data output */
+#ipData {
+    margin-top: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+/* New styles for the copy icon */
+.copy-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url('copy.img'); /* Update with the path to your new icon */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Ensure the IP box has a relative position */
+.ip-box {
+    position: relative;
+    background: var(--bg-color);
+    border-radius: 15px;
+    box-shadow: 9px 9px 16px var(--shadow-dark), -9px -9px 16px var(--shadow-light);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+.ip-header {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.ip-info {
+    display: grid;
+    gap: 10px;
+}
+
+/* Gaya untuk item output di dalam blok IP */
+.output-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.output-key {
+    font-weight: bold;
+    color: #555;
+}
+
+.output-value {
+    color: #333;
+}
+
+/* Gaya untuk kredit */
+.credits {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.7em;
+    color: #666;
+}
+
+.credits a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries untuk tampilan yang lebih kecil */
+@media (max-width: 600px) {
+    .input-section {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 50px;
+    }
+}
+
